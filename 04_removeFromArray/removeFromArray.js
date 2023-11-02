@@ -1,7 +1,17 @@
 const removeFromArray = function(array, ...removals) {
-
+    Elementselect:
+    for (let i = removals.length-1; i >= 0; i--) {
+        let searchtarget = removals[i]
+        let foundIndex;
+        while ((foundIndex = array.indexOf(searchtarget)) !== -1) {
+            array.splice(foundIndex,1)
+        }
+    }
+    return array;
 };
 
+
+// so for each entry in removals (loop one) we have to remove all of its entries from the array (loop two)
 
 
 // so, we get given an array and something we need to remove
