@@ -1,7 +1,9 @@
 const palindromes = function (string) {
-    let workingString = string.replace(/\w|\d/gi, '').toLowerCase()
+    let workingString = string.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
     let stringLength = workingString.length
     let valid = true
+
+
     for (let i = 0; i < stringLength / 2; i++) {
         if (workingString[i] !== workingString[stringLength - 1 - i]) {
             valid = false
